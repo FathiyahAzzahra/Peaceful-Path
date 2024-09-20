@@ -1,26 +1,36 @@
+:root {
+        --cokelatMuda:#eed9c4;
+        --cokelatSedang:#ac8f69;
+        --cokelatTua:#422b0c;
+
+        --textColor1:#221c16;
+        --textColor2:#474543;
+
+        --white:#ffffff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffe6f0; /* Soft baby pink pastel background */
-    color: #333; /* Text color */
 }
 
 /* Header styling */
 header {
-    background-color: #e84393; /* Soft pink for header */
+    /* background-color: #e84393; Soft pink for header */
     padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #ff99cc; /* Soft pink border */
+    border-bottom: 3px solid var(--textColor2); /* Soft pink border */
+    background-color: var(--cokelatMuda); /* Soft baby pink pastel background */
 }
 
 #logo {
     font-size: 28px;
     font-weight: bold;
-    color: white; /* Logo text color */
+    color: var(--textColor2); /* Logo text color */
     margin-left: 20px;
 }
 
@@ -34,22 +44,23 @@ nav {
     padding: 0;
     margin: 0;
     display: flex;
-}
+    justify-content: center;
+    }
 
-.bar ul li {
-    margin-left: 20px;
-}
+nav ul li {
+    margin: 0 15px;
+    }
 
 .bar ul li a {
     text-decoration: none;
-    color: white; /* Link color */
+    color: var(--textColor2); /* Link color */
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .bar ul li a:hover {
-    color: #c70039; /* Darker pink for link hover */
+    color: var(--textColor1 );
 }
 
 /* Main section styling */
@@ -63,19 +74,19 @@ main {
 
 .intro h1 {
     font-size: 45px;
-    color: #e84393; /* Soft pink for heading text */
+    color:var(--textColor1  ); /* Soft pink for heading text */
     margin-bottom: 20px;
 }
 
 .intro p {
     font-size: 20px;
     margin-bottom: 30px;
-    color: #555; /* Darker color for the paragraph text */
+    color: var(--textColor2); /* Darker color for the paragraph text */
 }
 
 .btn {
     padding: 15px 30px;
-    background-color: #e84393; /* Button background with soft pink */
+    background-color: var(--cokelatTua); /* Button background with soft pink */
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -83,7 +94,7 @@ main {
 }
 
 .btn:hover {
-    background-color: #c70039; /* Darker pink for button hover */
+    background-color: var(--cokelatSedang); /* Darker pink for button hover */
 }
 
 /* Features section styling */
@@ -95,7 +106,7 @@ main {
 }
 
 .feature-box {
-    background-color: #ffb3d9; /* Soft pastel pink for feature boxes */
+    background-color:var(--cokelatMuda); /* Soft pastel pink for feature boxes */
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -106,10 +117,92 @@ main {
 .feature-box h3 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #c70039; /* Darker pink for feature titles */
+    color: var(--cokelatTua); /* Darker pink for feature titles */
 }
 
 .feature-box p {
     font-size: 16px;
     color: #555; /* Darker text for descriptions */
+}
+
+/* ------------------------------------------------- */
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+/* ZARA */
+/* Progress Bar Styles */
+#progress-bar {
+    width: 100%;
+    background-color: #f0f4f8;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 50%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Wearable Data */
+#wearable-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* ------------------------------------------------- */
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Progress Bar Styles */
+#progress-bar {
+    width: 100%;
+    background-color: #f0f4f8;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 50%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Wearable Data */
+#wearable-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
 }
