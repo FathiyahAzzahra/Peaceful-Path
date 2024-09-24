@@ -1,0 +1,126 @@
+:root {
+    --cokelatMuda:#eed9c4;
+    --cokelatSedang:#ac8f69;
+    --cokelatTua:#422b0c;
+
+    --textColor1:#221c16;
+    --textColor2:#474543;
+
+    --white:#ffffff;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+/* Header styling */
+header {
+/* background-color: #e84393; Soft pink for header */
+padding: 15px 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-bottom: 3px solid var(--textColor2); /* Soft pink border */
+background-color: var(--cokelatMuda); /* Soft baby pink pastel background */
+}
+
+#logo {
+font-size: 28px;
+font-weight: bold;
+color: var(--textColor2); /* Logo text color */
+margin-left: 20px;
+}
+
+nav {
+margin-right: 20px;
+}
+
+/* Navigation bar styling */
+.bar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+}
+
+nav ul li {
+margin: 0 15px;
+}
+
+.bar ul li a {
+text-decoration: none;
+color: var(--textColor2); /* Link color */
+font-weight: bold;
+font-size: 16px;
+transition: color 0.3s ease;
+}
+
+.bar ul li a:hover {
+color: var(--textColor1 );
+}
+
+/* Main section styling */
+main {
+text-align: center;
+padding: 50px 20px;
+background-color: #fff; /* White background for the main content */
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+font-size: 45px;
+color:var(--textColor1  ); /* Soft pink for heading text */
+margin-bottom: 20px;
+}
+
+.intro p {
+font-size: 20px;
+margin-bottom: 30px;
+color: var(--textColor2); /* Darker color for the paragraph text */
+}
+
+.btn {
+padding: 15px 30px;
+background-color: var(--cokelatTua); /* Button background with soft pink */
+color: white;
+text-decoration: none;
+font-size: 18px;
+border-radius: 5px;
+}
+
+.btn:hover {
+background-color: var(--cokelatSedang); /* Darker pink for button hover */
+}
+
+/* Features section styling */
+.features {
+display: flex;
+flex-wrap: wrap; /* Allow wrapping to fit more boxes */
+justify-content: center;
+margin-top: 50px;
+}
+
+.feature-box {
+background-color:var(--cokelatMuda); /* Soft pastel pink for feature boxes */
+padding: 20px;
+margin: 10px;
+border-radius: 10px;
+text-align: center;
+width: 250px; /* Fixed width for feature boxes */
+}
+
+.feature-box h3 {
+font-size: 22px;
+margin-bottom: 10px;
+color: var(--cokelatTua); /* Darker pink for feature titles */
+}
+
+.feature-box p {
+font-size: 16px;
+color: #555; /* Darker text for descriptions */
+}
