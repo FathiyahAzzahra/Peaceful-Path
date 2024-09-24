@@ -1,0 +1,54 @@
+:root {
+    --cokelatMuda: #eed9c4;
+    --cokelatSedang: #ac8f69;
+    --cokelatTua: #422b0c;
+
+    --textColor1: #221c16;
+    --textColor2: #474543;
+
+    --white: #ffffff;
+}
+
+/* ZARA */
+/* ------------------------------------------------- */
+/* Progress Bar Styles */
+#progress-bar {
+    width: 100%;
+    background-color: var(--cokelatMuda); /* Menggunakan cokelat muda */
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 50%;
+    background-color: var(--cokelatTua); /* Menggunakan cokelat tua */
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Wearable Data */
+#wearable-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    color: var(--textColor1); /* Menggunakan warna teks 1 */
+}
+
+/* ------------------------------------------------- */
+/* Section Styles */
+section {
+    background-color: var(--white); /* Menggunakan warna putih */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h2 {
+    margin-bottom: 10px;
+    color: var(--textColor2); /* Menggunakan warna teks 2 */
+}

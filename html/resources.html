@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="../css/resources.css">
+    
+</head>
+<body>
+    <header class="header">
+        <h1>Resources</h1>
+        <p>your hub for mental health support and education.</p>
+    </header>
+
+    <!-- video section -->
+    <section id="video-section">
+        <div class="container">
+            <div class="slide-container">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="video-box">
+                            <!-- thumbnail -->
+                            <img  id="thumbnail1" src="../assets/zara/foto/thumbnail 1.png" alt="Video Thumbnail 1" onclick="toggleVideo('video1', 'thumbnail1', 'backButton1')">
+                            <!-- video -->
+                            <video id="video1" controls style="display:none;">
+                                <source src="../assets/zara/video/video 1.mp4" type="video/mp4">
+                            </video>
+                            <!-- Tombol Back yang awalnya tersembunyi -->
+                            <button id="backButton1" style="display: none;" onclick="toggleVideo('thumbnail1', 'video1', 'backButton1')">Back</button>
+                                
+                        </div>
+                        <div class="video-desc">
+                            <h4 class="vid-title">Talking mental health</h4>
+                            <h5 class="vid-subtitle">video edukasi</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Tips Section -->
+    <section id="head-tips">
+        <div class="title">
+            <h1>Resources</h1>
+            <p>Kumpulan artikel, video, dan gambar inspiratif untuk kesehatan mental.</p>
+            <input type="text" id="searchBar" placeholder="Cari tips...">
+        </div>
+    </section>
+
+    <!-- <section class="tips-section">
+        <h2>Tips Kesehatan Mental Harian</h2>
+        <div class="tips-grid">
+            <div class="tip-card">
+                <h3>Manajemen Stres</h3>
+                <p>Find quick techniques to reduce stress and regain your calm.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Latihan Pernapasan</h3>
+                <p>Try a quick breathing exercise to relax your mind and body.</p>
+            </div>
+            <div class="tip-card">
+                <h3>Self-Care</h3>
+                <p>Simple self-care ideas to keep your mind and body in balance.</p>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- ---------------------------------- -->
+
+    <script src="../js/resources.js"></script>
+</body>
+</html>
