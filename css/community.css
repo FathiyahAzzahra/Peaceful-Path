@@ -1,0 +1,173 @@
+:root {
+    --cokelatMuda: #eed9c4;
+    --cokelatSedang: #ac8f69;
+    --cokelatTua: #422b0c;
+
+    --textColor1: #221c16;
+    --textColor2: #474543;
+
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cokelatMuda); /* Background warna cokelat muda */
+    margin: 0;
+    padding: 0;
+    color: var(--textColor1); /* Warna teks utama */
+}
+
+/* Styling untuk header */
+header {
+    background-color: var(--cokelatSedang); /* Warna cokelat sedang */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white); /* Warna putih untuk logo */
+}
+
+nav .bar {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--white); /* Warna putih untuk link */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--cokelatTua); /* Warna cokelat tua untuk efek hover */
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--cokelatTua); /* Warna cokelat tua */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.new-post textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--cokelatSedang); /* Warna cokelat sedang */
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--cokelatMuda);
+    transition: border-color 0.3s ease;
+}
+
+.new-post textarea:focus {
+    border-color: var(--cokelatTua);
+    outline: none;
+}
+
+.new-post button {
+    float: right;
+    padding: 10px 20px;
+    background-color: var(--cokelatSedang);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.new-post button:hover {
+    background-color: var(--cokelatTua);
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--cokelatSedang);
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.post-content {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--textColor1);
+}
+
+.post-replies {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid var(--cokelatSedang);
+}
+
+.reply {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cokelatMuda);
+}
+
+.reply textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid var(--cokelatSedang);
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+.reply textarea:focus {
+    border-color: var(--cokelatTua);
+    outline: none;
+}
+
+.reply button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: var(--cokelatSedang);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reply button:hover {
+    background-color: var(--cokelatTua);
+}
