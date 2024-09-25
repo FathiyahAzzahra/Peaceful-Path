@@ -13,7 +13,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../assets/fanny/background.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,9 +35,17 @@ header {
 #logo {
     font-size: 28px;
     font-weight: bold;
-    color: var(--textColor2); /* Logo text color */
+    color: var(--textColor2); 
     margin-left: 20px;
+    display: flex;
+    align-items: center; 
 }
+
+#logo img {
+    height: 50px; 
+    margin-right: 10px; 
+}
+
 
 nav {
     margin-right: 20px;
