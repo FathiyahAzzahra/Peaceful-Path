@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peaceful Path</title>
-    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css"> <!-- Link to external CSS -->
+    <style>
+        .feature-box {
+            transition: transform 0.3s ease; 
+            cursor: pointer; 
+        }
+
+        .feature-box:active,
+        .feature-box:hover,
+        .feature-box:focus {
+            transform: scale(0.9); 
+        }
+
+    </style>
 </head>
 <body>
     <!-- Header section -->
@@ -32,18 +44,13 @@
     <main>
         <section class="intro">
             <h1>Welcome to Peaceful Path</h1>
-            <p>Your platform for mental health and well-being. Discover tools to help you recharge and restore balance in your mental wellness journey.</p>
+            <p>Find peace and balance on your mental wellness journey. Explore tools designed to help you recharge and nurture your well-being.</p>
             <a href="meditation.html" class="btn">Start Meditation</a>
             <a href="wellness.html" class="btn" style="margin-left: 15px;">Daily Wellness Tips</a>
         </section>
 
         <!-- Features Section -->
         <section class="features">
-            <div class="feature-box">
-                <h3>Home</h3>
-                <p>Return to the main dashboard and explore.</p>
-            </div>
-
             <div class="feature-box">
                 <h3>Meditation & Relaxation</h3>
                 <p>Find peace with guided meditations and relaxation techniques.</p>
