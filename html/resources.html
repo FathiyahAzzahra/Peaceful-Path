@@ -5,74 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
     <link rel="stylesheet" href="../css/resources.css">
-    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <!-- Header Section -->
     <header class="header">
         <h1>Resources</h1>
-        <p>your hub for mental health support and education.</p>
+        <p>Your hub for mental health support and education.</p>
     </header>
 
-    <!-- video section -->
-    <section id="video-section">
-        <div class="container">
-            <div class="slide-container">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="video-box">
-                            <!-- thumbnail -->
-                            <img  id="thumbnail1" src="../assets/zara/foto/thumbnail 1.png" alt="Video Thumbnail 1" onclick="toggleVideo('video1', 'thumbnail1', 'backButton1')">
-                            <!-- video -->
-                            <video id="video1" controls style="display:none;">
-                                <source src="../assets/zara/video/video 1.mp4" type="video/mp4">
-                            </video>
-                            <!-- Tombol Back yang awalnya tersembunyi -->
-                            <button id="backButton1" style="display: none;" onclick="toggleVideo('thumbnail1', 'video1', 'backButton1')">Back</button>
-                                
-                        </div>
-                        <div class="video-desc">
-                            <h4 class="vid-title">Talking mental health</h4>
-                            <h5 class="vid-subtitle">video edukasi</h5>
-                        </div>
-                    </div>
-
-                </div>
+    <!-- Video Gallery Section -->
+    <div class="video-gallery-container swiper">
+        <div class="card-wrapper swiper-wrapper">
+            <div class="card-item swiper-slide">
+                <a href="../assets/zara/video/video1" class="card-link">
+                    <img src="../assets/zara/foto/thumbnail 1.png" alt="Thumbnail 1" class="video-thumbnail">
+                    <h3 class="vid-title">Video Title 1</h3>
+                    <p class="vid-desc">Short description about video 1.</p>
+                </a>
             </div>
+            <div class="card-item swiper-slide">
+                <a href="../assets/zara/video/video 2.mp4" class="card-link">
+                    <img src="../assets/zara/foto/thumbnail 2.png" alt="Thumbnail 2" class="video-thumbnail">
+                    <h3 class="vid-title">Video Title 2</h3>
+                    <p class="vid-desc">Short description about video 2.</p>
+                </a>
+            </div>
+            <div class="card-item swiper-slide">
+                <a href="../assets/zara/video/video 3.mp4" class="card-link">
+                    <img src="../assets/zara/foto/thumbnail 3.png" alt="Thumbnail 3" class="video-thumbnail">
+                    <h3 class="vid-title">Video Title 3</h3>
+                    <p class="vid-desc">Short description about video 3.</p>
+                </a>
+            </div>
+            <div class="card-item swiper-slide">
+                <a href="../assets/zara/video/video 4.mp4" class="card-link">
+                    <img src="../assets/zara/foto/thumbnail 4.png" alt="Thumbnail 4" class="video-thumbnail">
+                    <h3 class="vid-title">Video Title 4</h3>
+                    <p class="vid-desc">Short description about video 4.</p>
+                </a>
+            </div>
+            <div class="card-item swiper-slide">
+                <a href="../assets/zara/video/video 5.mp4" class="card-link">
+                    <img src="../assets/zara/foto/thumbnail 5.png" alt="Thumbnail 5" class="video-thumbnail">
+                    <h3 class="vid-title">Video Title 5</h3>
+                    <p class="vid-desc">Short description about video 5.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Pagination and Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Article List Section -->
+    <section class="article-list-section">
+        <h2 class="section-title">Supporting Articles</h2>
+        <div class="article-list">
+            <article class="article-item">
+                <h3>Article Title 1</h3>
+                <p>A short overview of the article to encourage readers to learn more about mental health practices.</p>
+                <a href="article1.html" class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item">
+                <h3>Article Title 2</h3>
+                <p>Learn more about effective mental health management strategies in this informative article.</p>
+                <a href="article2.html" class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item">
+                <h3>Article Title 3</h3>
+                <p>Discover ways to improve your mental well-being through mindfulness and meditation.</p>
+                <a href="article3.html" class="read-more-btn">Read More</a>
+            </article>
         </div>
     </section>
-
-
-    <!-- Tips Section -->
-    <section id="head-tips">
-        <div class="title">
-            <h1>Resources</h1>
-            <p>Kumpulan artikel, video, dan gambar inspiratif untuk kesehatan mental.</p>
-            <input type="text" id="searchBar" placeholder="Cari tips...">
-        </div>
-    </section>
-
-    <!-- <section class="tips-section">
-        <h2>Tips Kesehatan Mental Harian</h2>
-        <div class="tips-grid">
-            <div class="tip-card">
-                <h3>Manajemen Stres</h3>
-                <p>Find quick techniques to reduce stress and regain your calm.</p>
-            </div>
-            <div class="tip-card">
-                <h3>Latihan Pernapasan</h3>
-                <p>Try a quick breathing exercise to relax your mind and body.</p>
-            </div>
-            <div class="tip-card">
-                <h3>Self-Care</h3>
-                <p>Simple self-care ideas to keep your mind and body in balance.</p>
-            </div>
-        </div>
-    </section> -->
-
-
-
-    <!-- ---------------------------------- -->
-
+    
     <script src="../js/resources.js"></script>
 </body>
 </html>
