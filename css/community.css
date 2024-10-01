@@ -1,14 +1,14 @@
+/* Root Variables */
 :root {
     --cokelatMuda: #eed9c4;
     --cokelatSedang: #ac8f69;
     --cokelatTua: #422b0c;
-
     --textColor1: #221c16;
     --textColor2: #474543;
-
     --white: #ffffff;
 }
 
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--cokelatMuda); /* Background warna cokelat muda */
@@ -17,49 +17,7 @@ body {
     color: var(--textColor1); /* Warna teks utama */
 }
 
-/* Styling untuk header */
-header {
-    background-color: var(--cokelatSedang); /* Warna cokelat sedang */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--white); /* Warna putih untuk logo */
-}
-
-nav .bar {
-    display: flex;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: var(--white); /* Warna putih untuk link */
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: var(--cokelatTua); /* Warna cokelat tua untuk efek hover */
-}
-
+/* Container */
 .container {
     width: 80%;
     margin: 30px auto;
@@ -67,20 +25,26 @@ nav ul li a:hover {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-h1 {
+/* Headings */
+h1, h2 {
     text-align: center;
     color: var(--cokelatTua); /* Warna cokelat tua */
-    font-size: 36px;
     margin-bottom: 20px;
 }
 
+h1 {
+    font-size: 36px;
+}
+
+/* New Post Section */
 .new-post textarea {
     width: 100%;
     height: 100px;
     margin-bottom: 10px;
-    padding: 10px;
     border: 1px solid var(--cokelatSedang); /* Warna cokelat sedang */
     border-radius: 10px;
     font-size: 16px;
@@ -93,7 +57,7 @@ h1 {
     outline: none;
 }
 
-.new-post button {
+.container button {
     float: right;
     padding: 10px 20px;
     background-color: var(--cokelatSedang);
@@ -105,10 +69,11 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.new-post button:hover {
+.container button:hover {
     background-color: var(--cokelatTua);
 }
 
+/* Post Section */
 .post {
     margin-bottom: 20px;
     padding: 15px;
@@ -125,9 +90,9 @@ h1 {
 .post-content {
     font-size: 16px;
     margin-bottom: 10px;
-    color: var(--textColor1);
 }
 
+/* Replies */
 .post-replies {
     margin-top: 10px;
     padding-left: 20px;
@@ -139,10 +104,12 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     background-color: var(--cokelatMuda);
+    display: flex;
+    flex-direction: column;
 }
 
 .reply textarea {
-    width: 100%;
+    width: 90%;
     height: 60px;
     padding: 10px;
     border: 1px solid var(--cokelatSedang);
@@ -170,4 +137,74 @@ h1 {
 
 .reply button:hover {
     background-color: var(--cokelatTua);
+}
+
+/* Support Groups */
+#support-groups {
+    display: flex;
+    gap: 30px;
+
+}
+
+#support-groups .group {
+    background-color: var(--white);
+    border: 1px solid var(--cokelatSedang);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+.group a {
+    text-decoration: none;
+    color: var(--cokelatTua);
+    transition: color 0.3s ease;
+}
+
+.group a:hover {
+    color: var(--cokelatSedang);
+}
+
+/* Live Sessions */
+#live-sessions .session {
+    background-color: var(--white);
+    border: 1px solid var(--cokelatSedang);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.session h3 {
+    color: var(--cokelatTua);
+    margin-bottom: 10px;
+}
+
+.session p {
+    color: var(--textColor1);
+}
+
+.session a {
+    text-decoration: none;
+    color: var(--cokelatTua);
+    transition: color 0.3s ease;
+}
+
+.session a:hover {
+    color: var(--cokelatSedang);
+}
+
+/* Influencers List */
+#influencers-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#influencers-list li {
+    background-color: var(--cokelatMuda);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

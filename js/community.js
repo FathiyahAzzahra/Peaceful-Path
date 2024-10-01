@@ -33,6 +33,8 @@ function createPostElement(content) {
     return postElement;
 }
 
+
+
 function showReplyBox(postElement) {
     const replyBox = document.createElement("div");
     replyBox.classList.add("reply");
