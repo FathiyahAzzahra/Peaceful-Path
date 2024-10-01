@@ -2,12 +2,11 @@
     --cokelatMuda: #eed9c4;
     --cokelatSedang: #ac8f69;
     --cokelatTua: #422b0c;
-
     --textColor1: #221c16;
     --textColor2: #474543;
-
     --white: #ffffff;
 }
+
 /* Basic Styling */
 body {
     font-family: Arial, sans-serif;
@@ -42,6 +41,10 @@ section {
 .daily-checklist ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* Supaya item tetap vertikal */
+    justify-content: center;
+    align-items: center; /* Memusatkan ul beserta itemnya */
 }
 
 .daily-checklist li {
