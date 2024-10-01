@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peaceful Path</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/meditation.css"> <!-- Link to external CSS -->
-    <link rel="stylesheet" href="meditation.css"> <!-- Link to new CSS -->
+    <link rel="stylesheet" href="../css/meditation.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
 </head>
 <body>
     <!-- Header section -->
     <header>
-        <div id="logo">Peaceful Path</div>
+        <div id="logo">
+            <img src="../assets/fanny/background.png" alt="Logo" style="height: 50px;">
+            Peaceful Path
+        </div>
         <nav>
             <div class="bar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="meditation.html">Meditation & Relaxation</a></li>
-                    <li><a href="wellness.html">Daily Wellness</a></li>
-                    <li><a href="tracking.html">Mood & Mental Tracking</a></li>
+                    <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
+                    <!-- <li><a href="tracking.html">Mood & Mental Tracking</a></li> -->
                     <li><a href="community.html">Community</a></li>
-                    <li><a href="progress.html">My Progress</a></li>
+                    <!-- <li><a href="progress.html">My Progress</a></li> -->
                     <li><a href="resources.html">Resources</a></li>
                 </ul>
             </div>
@@ -60,62 +62,13 @@
         <div class="meditation-item">
             <h3><i class="fas fa-volume-up"></i> Meditasi 15 Menit - Tidur</h3>
             <audio class="meditation-audio" controls>
-                <source src="Relaksasi 15 menit.mp3" type="audio/mpeg">
+                <source src="../assets/dina/Relaksasi 10 menit.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung elemen audio.
             </audio>
         </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // JavaScript to prevent multiple audios from playing simultaneously
-        $(document).ready(function() {
-            let currentAudio = null;
-
-            $('.meditation-audio').on('play', function() {
-                if (currentAudio && currentAudio !== this) {
-                    currentAudio.pause(); // Pause the currently playing audio
-                    currentAudio.currentTime = 0; // Optional: reset to start
-                }
-                currentAudio = this; // Update the current audio
-            });
-
-            $('.meditation-audio').on('ended', function() {
-                currentAudio = null; // Reset when audio ends
-            });
-        });
-
-        // Countdown Timer
-        let countdownTimer;
-        let timeLeft = 60; // Set initial time (in seconds)
-
-        function updateTimerDisplay() {
-            const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-            const seconds = String(timeLeft % 60).padStart(2, '0');
-            $('#timeDisplay').text(`${minutes}:${seconds}`);
-        }
-
-        $('#startButton').on('click', function() {
-            clearInterval(countdownTimer);
-            timeLeft = 60; // Reset time to 60 seconds
-            updateTimerDisplay();
-
-            countdownTimer = setInterval(function() {
-                if (timeLeft > 0) {
-                    timeLeft--;
-                    updateTimerDisplay();
-                } else {
-                    clearInterval(countdownTimer);
-                    alert("Waktu habis! Silakan bernafas dengan tenang.");
-                }
-            }, 1000);
-        });
-
-        $('#resetButton').on('click', function() {
-            clearInterval(countdownTimer);
-            timeLeft = 60; // Reset time
-            updateTimerDisplay();
-        });
-    </script>
+    <script src="../js/meditation.js"></script>
 </body>
 </html>

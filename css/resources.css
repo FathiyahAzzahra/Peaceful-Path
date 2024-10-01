@@ -11,15 +11,33 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--cokelatMuda2);
+    background-color: var(--white);
     color: var(--textColor1);
 }
 
-header {
-    background-color: var(--cokelatSedang);
-    padding: 20px;
-    text-align: center;
-    color: var(--white);
+.opening {
+    background-color: var(--white); /* Background warna cokelat sedang */
+    padding: 20px; /* Memberi ruang di dalam container */
+    text-align: center; /* Teks ditengah secara horizontal */
+    justify-content: center; /* Mengatur konten agar terpusat */
+    color: var(--textColor1); /* Warna teks putih */
+    min-height: 50vh; /* Tinggi minimal setengah layar */
+    
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    flex-direction: column; /* Mengatur elemen menjadi kolom */
+    align-items: center; /* Elemen rata tengah secara horizontal */
+    justify-content: center; /* Elemen rata tengah secara vertikal */
+}
+
+.opening h1 {
+    font-size: 2.5rem; /* Ukuran font lebih besar untuk judul */
+    margin-bottom: 10px; /* Memberi jarak antara judul dan deskripsi */
+}
+
+.opening p {
+    font-size: 1.2rem; /* Ukuran font untuk paragraf deskripsi */
+    margin: 0; /* Menghilangkan margin default */
+    line-height: 1.5; /* Memberikan spasi antar baris agar lebih terbaca */
 }
 
 h1 {
@@ -42,16 +60,16 @@ p {
 .video-gallery-container {
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(var(--cokelatMuda), var(--white), var(--cokelatMuda));
 }
 
 .card-wrapper {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 60px 35px;
     padding: 20px 10px;
-    overflow: hidden;
 }
 
 .card-item {
@@ -95,6 +113,7 @@ p {
 }
 
 /* Article List Section */
+
 .article-list {
     display: flex;
     justify-content: center;
@@ -106,7 +125,7 @@ p {
 .article-item {
     background-color: var(--cokelatMuda);
     padding: 20px;
-    width: 30%;
+    width: 40%;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -124,4 +143,29 @@ p {
     color: var(--white);
     text-decoration: none;
     border-radius: 5px;
+}
+
+
+
+/* ------------------ */
+
+/* Theme Button Styles */
+.theme-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.theme-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: var(--cokelatTua);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: var(--cokelatSedang);
 }

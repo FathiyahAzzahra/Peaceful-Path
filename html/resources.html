@@ -5,50 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
     <link rel="stylesheet" href="../css/resources.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
+    <!-- Header section -->
+    <header>
+        <div id="logo">
+            <img src="../assets/fanny/background.png" alt="Logo" style="height: 50px;">
+            Peaceful Path
+        </div>
+        <nav>
+            <div class="bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../html/meditation.html">Meditation & Relaxation</a></li>
+                    <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
+                    <!-- <li><a href="tracking.html">Mood & Mental Tracking</a></li> -->
+                    <li><a href="community.html">Community</a></li>
+                    <!-- <li><a href="../html/MyProgress.html">My Progress</a></li> -->
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
     <!-- Header Section -->
-    <header class="header">
+    <div class="opening">
         <h1>Resources</h1>
         <p>Your hub for mental health support and education.</p>
-    </header>
+    </div>
 
     <!-- Video Gallery Section -->
     <div class="video-gallery-container swiper">
         <div class="card-wrapper swiper-wrapper">
             <div class="card-item swiper-slide">
-                <a href="../assets/zara/video/video1" class="card-link">
+                <a href="../assets/zara/video/video1" class="card-link" target="_blank">
                     <img src="../assets/zara/foto/thumbnail 1.png" alt="Thumbnail 1" class="video-thumbnail">
                     <h3 class="vid-title">Video Title 1</h3>
                     <p class="vid-desc">Short description about video 1.</p>
                 </a>
             </div>
             <div class="card-item swiper-slide">
-                <a href="../assets/zara/video/video 2.mp4" class="card-link">
+                <a href="../assets/zara/video/video 2.mp4" class="card-link"  target="_blank">
                     <img src="../assets/zara/foto/thumbnail 2.png" alt="Thumbnail 2" class="video-thumbnail">
                     <h3 class="vid-title">Video Title 2</h3>
                     <p class="vid-desc">Short description about video 2.</p>
                 </a>
             </div>
             <div class="card-item swiper-slide">
-                <a href="../assets/zara/video/video 3.mp4" class="card-link">
+                <a href="../assets/zara/video/video 3.mp4" class="card-link" target="_blank">
                     <img src="../assets/zara/foto/thumbnail 3.png" alt="Thumbnail 3" class="video-thumbnail">
                     <h3 class="vid-title">Video Title 3</h3>
                     <p class="vid-desc">Short description about video 3.</p>
                 </a>
             </div>
             <div class="card-item swiper-slide">
-                <a href="../assets/zara/video/video 4.mp4" class="card-link">
+                <a href="../assets/zara/video/video 4.mp4" class="card-link" target="_blank">
                     <img src="../assets/zara/foto/thumbnail 4.png" alt="Thumbnail 4" class="video-thumbnail">
                     <h3 class="vid-title">Video Title 4</h3>
                     <p class="vid-desc">Short description about video 4.</p>
                 </a>
             </div>
             <div class="card-item swiper-slide">
-                <a href="../assets/zara/video/video 5.mp4" class="card-link">
+                <a href="../assets/zara/video/video 5.mp4" class="card-link" target="_blank">
                     <img src="../assets/zara/foto/thumbnail 5.png" alt="Thumbnail 5" class="video-thumbnail">
                     <h3 class="vid-title">Video Title 5</h3>
                     <p class="vid-desc">Short description about video 5.</p>
@@ -65,28 +88,91 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
+
     <!-- Article List Section -->
     <section class="article-list-section">
         <h2 class="section-title">Supporting Articles</h2>
+            <!-- Theme Buttons -->
+        <div class="theme-buttons">
+            <button class="theme-btn" data-theme="all">All</button>
+            <button class="theme-btn" data-theme="mental-health">Kesehatan Mental</button>
+            <button class="theme-btn" data-theme="meditation">Meditasi</button>
+            <button class="theme-btn" data-theme="sleep">Tidur & Kesehatan</button>
+        </div>
         <div class="article-list">
-            <article class="article-item">
-                <h3>Article Title 1</h3>
-                <p>A short overview of the article to encourage readers to learn more about mental health practices.</p>
-                <a href="article1.html" class="read-more-btn">Read More</a>
+            <article class="article-item" data-theme="mental-health">
+                <h3>Apa itu Kesehatan Mental? Gejala & Penyebab</h3>
+                <p>Kesehatan jiwa atau sebutan lainnya kesehatan mental adalah kesehatan yang berkaitan dengan kondisi emosi, kejiwaan, dan psikis seseorang    </p>
+                <a href="https://www.halodoc.com/kesehatan/kesehatan-mental?srsltid=AfmBOorcGTKBfvPBenh3E-I0ymy-pJRRC4XPUjYIQ7FBeAvSu3t5EsNd" class="read-more-btn">Read More</a>
             </article>
-            <article class="article-item">
-                <h3>Article Title 2</h3>
-                <p>Learn more about effective mental health management strategies in this informative article.</p>
-                <a href="article2.html" class="read-more-btn">Read More</a>
+            <article class="article-item" data-theme="meditation">
+                <h3>Meditasi untuk Mengatasi Stres dan Penyakit</h3>
+                <p>Banyak orang mengira bahwa diperlukan ruangan tenang, musik khusus, atau ritual tertentu untuk melakukan meditasi. Padahal, Anda bisa melakukannya kapan saja, misalnya saat menunggu bus datang, istirahat di sela waktu kerja, atau di tengah kemacetan lalu lintas.</p>
+                <a href="https://www.alodokter.com/sering-sakit-dan-stres-coba-meditasi" class="read-more-btn">Read More</a>
             </article>
-            <article class="article-item">
-                <h3>Article Title 3</h3>
-                <p>Discover ways to improve your mental well-being through mindfulness and meditation.</p>
-                <a href="article3.html" class="read-more-btn">Read More</a>
+            <article class="article-item" data-theme="sleep">
+                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
+                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
+                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="sleep">
+                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
+                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
+                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="sleep">
+                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
+                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
+                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="sleep">
+                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
+                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
+                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="meditation">
+                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
+                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
+                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="meditation">
+                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
+                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
+                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="mental-health">
+                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
+                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
+                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
             </article>
         </div>
     </section>
     
     <script src="../js/resources.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-description">
+                <h3>Tentang Peaceful Path</h3>
+                <p>Peaceful Path adalah platform yang membantu Anda menemukan ketenangan melalui meditasi, pelacakan kesejahteraan harian, dan komunitas yang mendukung kesehatan mental.</p>
+            </div>
+            <div class="footer-social">
+                <h3>Ikuti Kami</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-copyright">
+        <p>&copy; 2024 Peaceful Path. All rights reserved.</p>
+    </div>
+
 </body>
 </html>

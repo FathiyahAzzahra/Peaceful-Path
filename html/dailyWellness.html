@@ -20,9 +20,35 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="dailyWellnes.css" />
-    <title>Calendar with Events</title>
+    <link rel="stylesheet" href="../css/myProgress.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Daily Wellness</title>
   </head>
+
+
   <body>
+    <!-- header -->
+    <header>
+      <div id="logo">
+          <img src="../assets/fanny/background.png" alt="Logo" style="height: 50px;">
+          Peaceful Path
+      </div>
+      <nav>
+          <div class="bar">
+              <ul>
+                  <li><a href="..//html/index.html">Home</a></li>
+                  <li><a href="../html/meditation.html">Meditation & Relaxation</a></li>
+                  <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
+                  <!-- <li><a href="tracking.html">Mood & Mental Tracking</a></li> -->
+                  <li><a href="community.html">Community</a></li>
+                  <!-- <li><a href="../html/MyProgress.html">My Progress</a></li> -->
+                  <li><a href="resources.html">Resources</a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+
     <div class="container">
       <div class="left">
         <div class="calendar">
@@ -91,5 +117,47 @@
     </div>
 
     <script src="script.js"></script>
-  </body>
-</html>
+
+
+
+<!-- -------------------------ZARA-------------------------------------- -->
+
+
+  <!-- Daily Checklist Section -->
+  <section class="daily-checklist">
+      <h2>Today's Checklist</h2>
+      <ul id="checklist">
+          <li>
+              <input type="checkbox" id="water" class="habit">
+              <label for="water">Drink 8 glasses of water</label>
+          </li>
+          <li>
+              <input type="checkbox" id="meditation" class="habit">
+              <label for="meditation">Meditate for 15 minutes</label>
+          </li>
+          <li>
+              <input type="checkbox" id="exercise" class="habit">
+              <label for="exercise">Do 30 minutes of exercise</label>
+          </li>
+      </ul>
+  </section>
+
+  <!-- Progress Bar Section -->
+  <section class="progress-section">
+      <h2>Your Progress</h2>
+      <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p id="progress-percentage">0% Complete</p>
+  </section>
+
+  <!-- Quotes Section -->
+  <section class="daily-quote">
+      <h2>Today's Quote</h2>
+      <blockquote id="quote">
+          "The journey of a thousand miles begins with one step." – Lao Tzu
+      </blockquote>
+  </section>
+
+  <script src="../js/myProgress.js"></script>
+</body>

@@ -1,29 +1,22 @@
-// $(document).ready(function() {
-//     let currentIndex = 0;
-//     const videoCount = $('.video-item').length;
-//     const itemWidth = $('.video-item').outerWidth(true);  // Include margin in item width
-//     const visibleItems = Math.floor($('.video-gallery-slider').width() / itemWidth); // Number of items visible
-//     const maxIndex = videoCount - visibleItems;
+document.addEventListener('DOMContentLoaded', function() {
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const articles = document.querySelectorAll('.article-item');
 
-//     // Scroll to the next set of videos
-//     $('.next-btn').click(function() {
-//         if (currentIndex < maxIndex) {
-//             currentIndex++;
-//             $('.video-gallery').css('transform', `translateX(${-itemWidth * currentIndex}px)`);
-//         }
-//     });    
-
-//     // Scroll to the previous set of videos
-//     $('.prev-btn').click(function() {
-//         if (currentIndex > 0) {
-//             currentIndex--;
-//             $('.video-gallery').css('transform', `translateX(${-itemWidth * currentIndex}px)`);
-//         }
-//     });
-
-//     // Adjust the width of the video gallery container to fit all items
-//     $('.video-gallery').css('width', `${itemWidth * videoCount}px`);
-// });
+    themeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const theme = this.getAttribute('data-theme');
+            
+            // Loop through all articles and toggle visibility
+            articles.forEach(article => {
+                if (article.getAttribute('data-theme') === theme || theme === "all") {
+                    article.style.display = 'block';  // Show matching articles
+                } else {
+                    article.style.display = 'none';  // Hide non-matching articles
+                }
+            });
+        });
+    });
+});
 
 
 // Initialize Swiper
@@ -51,4 +44,6 @@ new Swiper('.video-gallery-container', {
         },
     }
 });
+
+
 
