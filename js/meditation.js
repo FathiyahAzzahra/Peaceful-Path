@@ -1,19 +1,41 @@
+<<<<<<< Updated upstream
 $(document).ready(function() {
     // Functionality for play buttons (audio/video)
     $('.play-btn').on('click', function() {
         const item = $(this).closest('.meditation-item');
         const type = item.data('type');
         const url = item.data('url');
+=======
+// Countdown Timer
+let countdownTimer;
+let timeLeft = 30; // 30 seconds
+>>>>>>> Stashed changes
 
-        if (type === 'audio') {
-            $('#video-player').hide();
-            $('#audio-player').show();
-            $('#audio-element').attr('src', url)[0].play();
-        } else if (type === 'video') {
-            $('#audio-player').hide();
-            $('#video-player').show();
-            $('#video-element').attr('src', url)[0].play();
+function updateTimerDisplay() {
+    const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
+    const seconds = String(timeLeft % 60).padStart(2, '0');
+    document.getElementById('timeDisplay').textContent = `${minutes}:${seconds}`;
+
+    // Calculate the progress and update the circle
+    const progressDegree = (1 - timeLeft / 1800) * 360; // Calculate degree of completion
+    document.querySelector('#circleProgress').style.background = `conic-gradient(var(--cokelatTua) ${progressDegree}deg, var(--cokelatMuda) ${progressDegree}deg)`;
+}
+
+
+document.getElementById('startButton').addEventListener('click', function () {
+    clearInterval(countdownTimer);
+    timeLeft = 30; // Reset time to 30 seconds
+    updateTimerDisplay();
+
+    countdownTimer = setInterval(function () {
+        if (timeLeft > 0) {
+            timeLeft--;
+            updateTimerDisplay();
+        } else {
+            clearInterval(countdownTimer);
+            alert("Waktu habis! Silakan bernafas dengan tenang.");
         }
+<<<<<<< Updated upstream
 
         $('#player-container').fadeIn();
     });
@@ -73,4 +95,16 @@ $(document).ready(function() {
         timeLeft = 60; // Reset time to 60 seconds
         updateTimerDisplay(); // Update the display
     });
+=======
+    }, 1000);
+>>>>>>> Stashed changes
 });
+
+document.getElementById('resetButton').addEventListener('click', function () {
+    clearInterval(countdownTimer);
+    timeLeft = 30; // Reset time
+    updateTimerDisplay();
+});
+
+// Initial display
+updateTimerDisplay();

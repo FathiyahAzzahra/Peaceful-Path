@@ -4,65 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peaceful Path</title>
-    <link rel="stylesheet" href="../css/meditation.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/meditation.css"> <!-- Link to external CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
 </head>
 <body>
     <!-- Header section -->
     <header>
-        <div id="logo">
-            <img src="../assets/fanny/background.png" alt="Logo" style="height: 50px;">
-            Peaceful Path
-        </div>
+        <div id="logo">Peaceful Path</div>
         <nav>
             <div class="bar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="meditation.html">Meditation & Relaxation</a></li>
+                    <li><a href="../html/meditation.html">Meditation & Relaxation</a></li>
                     <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
                     <!-- <li><a href="tracking.html">Mood & Mental Tracking</a></li> -->
-                    <li><a href="community.html">Community</a></li>
-                    <!-- <li><a href="progress.html">My Progress</a></li> -->
+                    <li><a href="../html/community.html">Community</a></li>
+                    <!-- <li><a href="../html/MyProgress.html">My Progress</a></li> -->
                     <li><a href="resources.html">Resources</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Countdown Timer Section -->
-    <section id="countdown">
+      <!-- Countdown Timer Section -->
+      <section id="countdown">
         <h2>Hitung Mundur Pernapasan</h2>
         <div id="timer" class="circle">
+            <div id="circleProgress"></div>
             <span id="timeDisplay">00:00</span>
         </div>
         <button id="startButton">Mulai</button>
         <button id="resetButton">Reset</button>
     </section>
+    <script src="script.js"></script>
+
 
     <!-- Meditation & Relaxation Section -->
     <section id="meditation">
         <h2>Meditation & Relaxation</h2>
         <p>Find peace with guided meditations and relaxation techniques.</p>
-        <div class="meditation-item">
+        <div class="meditation-item" data-type="audio" data-url="../assets/dina/Relaksasi 5 menit.mp3">
             <h3><i class="fas fa-volume-up"></i> Meditasi 5 Menit - Relaksasi</h3>
             <audio class="meditation-audio" controls>
                 <source src="../assets/dina/Relaksasi 5 menit.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung elemen audio.
             </audio>
         </div>
-        <div class="meditation-item">
+        <div class="meditation-item" data-type="audio" data-url="../assets/dina/Relaksasi 10 menit.mp3">
             <h3><i class="fas fa-volume-up"></i> Meditasi 10 Menit - Fokus</h3>
             <audio class="meditation-audio" controls>
                 <source src="../assets/dina/Relaksasi 10 menit.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung elemen audio.
             </audio>
         </div>
-        <div class="meditation-item">
+        <div class="meditation-item" data-type="audio" data-url="../assets/dina/Relaksasi 15 menit.mp3">
             <h3><i class="fas fa-volume-up"></i> Meditasi 15 Menit - Tidur</h3>
             <audio class="meditation-audio" controls>
-                <source src="../assets/dina/Relaksasi 10 menit.mp3" type="audio/mpeg">
+                <source src="Relaksasi 15 menit.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung elemen audio.
             </audio>
         </div>
