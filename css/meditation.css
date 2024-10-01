@@ -1,6 +1,5 @@
 :root {
     --cokelatMuda: #eed9c4;
-<<<<<<< Updated upstream
     --cokelatMuda2: #f8e3cc;
     --cokelatSedang: #ac8f69;
     --cokelatTua: #422b0c;
@@ -38,6 +37,7 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -50,88 +50,6 @@ section {
     justify-content: center;
     align-items: center;
     margin: 20px auto;
-}
-
-#timeDisplay {
-    font-size: 2.5rem;
-    color: var(--white);
-}
-
-button {
-    background-color: var(--cokelatTua);
-    color: var(--white);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-button:hover {
-    background-color: var(--cokelatSedang);
-}
-
-/* Meditation Section */
-#meditation {
-    background-color: var(--cokelatMuda2);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.meditation-item {
-    margin: 20px 0;
-}
-
-.meditation-item h3 {
-    font-size: 1.2rem;
-    color: var(--cokelatTua);
-    margin-bottom: 10px;
-}
-
-.meditation-item i {
-    margin-right: 10px;
-    color: var(--cokelatSedang);
-}
-
-audio {
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Footer Styling */
-footer {
-    background-color: var(--cokelatSedang);
-    padding: 20px;
-    color: var(--white);
-    text-align: center;
-=======
-    --cokelatSedang: #ac8f69;
-    --cokelatTua: #422b0c;
-
-    --textColor1: #221c16;
-    --textColor2: #474543;
-
-    --white: #ffffff;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--white);
-}
-
-
-#countdown {
-    text-align: center;
-}
-
-#countdown h2 {
-    color: var(--textColor1);
-    font-size: 24px;
-    margin-bottom: 20px;
 }
 
 #timer {
@@ -176,22 +94,22 @@ body {
 }
 
 button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: var(--cokelatSedang);
+    background-color: var(--cokelatTua);
     color: var(--white);
     border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: var(--cokelatTua);
+    background-color: var(--cokelatSedang);
+    transform: translateY(-2px);
 }
 
-
-/* Button styling */
 #startButton,
 #resetButton {
     background-color: var(--cokelatMuda);
@@ -201,17 +119,15 @@ button:hover {
     margin: 10px;
     border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
 #startButton:hover,
 #resetButton:hover {
     background-color: var(--cokelatSedang);
-    transform: translateY(-2px);
 }
 
-/* Meditation Section */
 #meditation {
+    background-color: var(--cokelatMuda2);
     padding: 20px;
     text-align: center;
 }
@@ -237,11 +153,13 @@ button:hover {
 }
 
 .meditation-item h3 {
-    margin: 0;
+    font-size: 1.2rem;
+    color: var(--cokelatTua);
+    margin: 0 0 10px;
 }
 
-.meditation-item audio {
+audio {
     width: 100%;
+    border-radius: 5px;
     margin-top: 10px;
->>>>>>> Stashed changes
 }
