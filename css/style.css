@@ -16,13 +16,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; /* Set minimal tinggi body */
+    min-height: 100vh; 
+    display: block;
 }
 
 
 /* Header styling */
 header {
-    /* background-color: #e84393; Soft pink for header */
     padding: 15px 0;
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ nav ul li {
 
 .bar ul li a {
     text-decoration: none;
-    color: var(--textColor2); /* Link color */
+    color: var(--textColor2); 
     font-weight: bold;
     font-size: 16px;
     transition: color 0.3s ease;
@@ -103,7 +103,7 @@ main {
 
 .btn {
     padding: 15px 30px;
-    background-color: var(--cokelatTua); /* Button background with soft pink */
+    background-color: var(--cokelatTua); 
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -123,7 +123,7 @@ main {
 }
 
 .feature-box {
-    background-color:var(--cokelatMuda); /* Soft pastel pink for feature boxes */
+    background-color:var(--cokelatMuda);
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -151,9 +151,93 @@ main {
     transform: scale(0.9); 
 }
 
+/* FAQ Section */
+.faq {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.faq h2 {
+    font-size: 30px;
+    color: var(--textColor1);
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-/* ---------footer---------------- */
+.faq details {
+    margin-bottom: 15px;
+    background-color: var(--cokelatMuda);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+.faq details[open] {
+    background-color: var(--cokelatSedang);
+    transform: scale(1.02);
+}
+
+.faq summary {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--cokelatTua);
+    list-style: none;
+    transition: color 0.3s ease;
+    text-align: left;
+}
+
+.faq summary:hover {
+    color: var(--textColor1);
+}
+
+.faq p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: var(--textColor2);
+    text-align: left;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.faq details[open] p {
+    opacity: 1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .feature-box {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+/* ------------------------------------------------- */
 
 /* Footer Styling */
 footer {
