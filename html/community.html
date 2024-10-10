@@ -32,11 +32,13 @@
 
     <div class="container">
         <h1>Forum Diskusi</h1>
-        <div id="discussion-container"></div>
         <div class="new-post">
             <textarea id="new-post-content" placeholder="Tulis diskusi baru..."></textarea>
         </div>
-        <button onclick="addPost()">Kirim</button>
+        <button id="kirim-button" onclick="addPost()">Kirim</button>
+        <div id="discussion-container">
+            
+        </div>
     </div>
 
     <div class="container"></div>
@@ -78,6 +80,29 @@
             <li>Dr. Jane Smith - Psikiater dan Konsultan Mental Health</li>
             <li>Prof. Albert Mentalo - Peneliti Neurosains Kesehatan Mental</li>
         </ul>
+    </div>    
+
+        <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-description">
+                <h3>Tentang Peaceful Path</h3>
+                <p>Peaceful Path adalah platform yang membantu Anda menemukan ketenangan melalui meditasi, pelacakan kesejahteraan harian, dan komunitas yang mendukung kesehatan mental.</p>
+            </div>
+            <div class="footer-social">
+                <h3>Ikuti Kami</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-copyright">
+        <p>&copy; 2024 Peaceful Path. All rights reserved.</p>
     </div>    
 
     <script src="../js/community.js"></script>

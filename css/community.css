@@ -18,7 +18,7 @@ body {
 }
 
 /* Container */
-.container {
+.container, #discussion-container {
     width: 80%;
     margin: 30px auto;
     padding: 20px;
@@ -27,6 +27,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+
+    display: flex;
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Opsional: untuk memusatkan vertikal */
+    height: 100%; /* Pastikan container memiliki tinggi yang sesuai */
 }
 
 /* Headings */
@@ -41,6 +46,11 @@ h1 {
 }
 
 /* New Post Section */
+.new-post, .post {
+    width: 100%; /* Memastikan lebar section sesuai container */
+    display: block; /* Pastikan new-post tidak terpengaruh flexbox */
+}
+
 .new-post textarea {
     width: 100%;
     height: 100px;
@@ -58,16 +68,27 @@ h1 {
 }
 
 .container button {
-    float: right;
+    /* float: right; */
     padding: 10px 20px;
-    background-color: var(--cokelatSedang);
+    background-color: var(--cokelatTua);
     color: var(--white);
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; 
+    width: 100px;
 }
+
+.kirim-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Memberi jarak antara button dan elemen lain */
+
+}
+
+
 
 .container button:hover {
     background-color: var(--cokelatTua);

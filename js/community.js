@@ -17,15 +17,15 @@ function createPostElement(content) {
     postContent.classList.add("post-content");
     postContent.textContent = content;
 
+    const repliesContainer = document.createElement("div");
+    repliesContainer.classList.add("post-replies");
+
     const replyButton = document.createElement("button");
     replyButton.textContent = "Balas";
     replyButton.onclick = function() {
         showReplyBox(postElement);
     };
-
-    const repliesContainer = document.createElement("div");
-    repliesContainer.classList.add("post-replies");
-
+    
     postElement.appendChild(postContent);
     postElement.appendChild(replyButton);
     postElement.appendChild(repliesContainer);
