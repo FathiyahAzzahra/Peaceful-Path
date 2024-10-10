@@ -29,40 +29,48 @@
         </nav>
     </header>
 
-    <!-- Countdown Timer Section -->
+    <!-- Stopwatch Section -->
     <section id="countdown">
-        <h2>Hitung Mundur Pernapasan</h2>
-        <div id="timer" class="circle">
-            <div id="circleProgress"></div>
-            <span id="timeDisplay">00:00</span>
+        <h2>Try a quick breathing exercise to ease your stress
+        </h2>
+        <div class="countdown-container">
+            <div id="timer">
+                <div id="circleProgress"></div>
+                <span id="timeDisplay">00:00</span>
+            </div>
+            <div class="input-container">
+                <label for="timeInput">Set Timer (seconds):</label>
+                <input type="number" id="timeInput" min="1" placeholder="Enter time in seconds">
+                <div class="button-container">
+                    <button id="startButton">Start</button>
+                    <button id="resetButton">Reset</button>
+                </div>
+            </div>
         </div>
-        <button id="startButton">Mulai</button>
-        <button id="resetButton">Reset</button>
     </section>
-
-
+    
     <!-- Meditation & Relaxation Section -->
     <section id="meditation">
         <h2>Meditation & Relaxation</h2>
-        <p>Find peace with guided meditations and relaxation techniques.</p>
+        <p>Temukan ketenangan dengan meditasi dan teknik relaksasi.</p>
         <div class="meditation-item" data-type="audio" data-url="../assets/dina/Relaksasi 5 menit.mp3">
-            <h3><i class="fas fa-volume-up"></i> Meditasi 5 Menit - Relaksasi</h3>
+            <h3><i class="fas fa-volume-up"></i> Meditasi 5 Menit</h3>
             <audio class="meditation-audio" controls>
                 <source src="../assets/dina/Relaksasi 5 menit.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung elemen audio.
             </audio>
         </div>
         <div class="meditation-item" data-type="audio" data-url="../assets/dina/Relaksasi 10 menit.mp3">
-            <h3><i class="fas fa-volume-up"></i> Meditasi 10 Menit - Fokus</h3>
+            <h3><i class="fas fa-volume-up"></i> Meditasi 10 menit</h3>
             <audio class="meditation-audio" controls>
                 <source src="../assets/dina/Relaksasi 10 menit.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung elemen audio.
             </audio>
         </div>
         <div class="meditation-item" data-type="audio" data-url="../assets/dina/Relaksasi 15 menit.mp3">
-            <h3><i class="fas fa-volume-up"></i> Meditasi 15 Menit - Tidur</h3>
+            <h3><i class="fas fa-volume-up"></i> Meditasi 15 Menit</h3>
             <audio class="meditation-audio" controls>
-                <source src="Relaksasi 15 menit.mp3" type="audio/mpeg">
+                <source src="../assets/dina/Relaksasi 15 menit.mp3" type="audio/mpeg">
                 Browser Anda tidak mendukung elemen audio.
             </audio>
         </div>
