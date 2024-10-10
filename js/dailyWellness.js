@@ -10,7 +10,7 @@ const monthDropdown = document.getElementById("month-dropdown");
 
 let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
-let selectedDay = null; // To track the selected day for the event
+let selectedDay = null; 
 let events = {};
 
 // List of month names
