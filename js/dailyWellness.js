@@ -141,9 +141,9 @@ monthPicker.onclick = () => {
 const monthItems = document.querySelectorAll(".month-item");
 monthItems.forEach(item => {
     item.onclick = () => {
-        currentMonth = parseInt(item.getAttribute("data-month")); // Update the current month
-        displayCurrentMonth(); // Re-render the calendar with the new month
-        monthDropdown.style.display = "none"; // Hide the dropdown
+        currentMonth = parseInt(item.getAttribute("data-month")); 
+        displayCurrentMonth(); 
+        monthDropdown.style.display = "none"; 
     };
 });
 
@@ -163,7 +163,7 @@ function checkTodayEvents() {
     // Jika ada event untuk hari ini, render checklist
     if (events[todayDate]) {
         const checklist = document.getElementById('checklist');
-        checklist.innerHTML = ''; // Clear existing checklist
+        checklist.innerHTML = ''; 
 
         // Render event sebagai checklist
         events[todayDate].forEach((event, index) => {

@@ -50,12 +50,29 @@ p {
     margin-top: 10px;
 }
 
-.logo-container img {
-    transition: transform 0.3s ease;
+.opening {
+    margin-top: 80px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cokelatMuda);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.logo-container img:hover {
-    transform: scale(1.1); /* Efek hover untuk logo */
+.logo {
+    width: 300px; /* Ubah ini untuk ukuran yang lebih besar */
+    height: auto; /* Pastikan proporsi gambar tetap benar */
+    object-fit: contain; /* Pastikan gambar tidak terdistorsi */
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Perbesar gambar saat hover */
 }
 
 

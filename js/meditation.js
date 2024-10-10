@@ -64,5 +64,18 @@ document.getElementById('resetButton').addEventListener('click', function () {
     timerSound.currentTime = 0; 
 });
 
+// Get the meditation wrapper element
+const meditationWrapper = document.querySelector('.meditation-wrapper');
+
+// Add event listeners for the scroll buttons
+document.getElementById('scroll-left').onclick = function() {
+    meditationWrapper.scrollBy({ left: -300, behavior: 'smooth' }); // Scroll left
+};
+
+document.getElementById('scroll-right').onclick = function() {
+    meditationWrapper.scrollBy({ left: 300, behavior: 'smooth' }); // Scroll right
+};
+
+
 // Initial display
 updateTimerDisplay();
