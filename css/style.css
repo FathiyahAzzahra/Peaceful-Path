@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Dubai Light', 'Century Gothic', sans-serif;
     margin: 0;
     padding: 0;
     background-size: cover;
@@ -30,6 +30,11 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid var(--textColor2); 
     background-color: var(--cokelatMuda); 
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 #logo {
@@ -47,33 +52,65 @@ header {
 }
 
 
-nav {
-    margin-right: 20px;
+/* Styling untuk navigasi dan menu */
+.bar {
+    position: relative;
+    padding-right: 20px;
+    background-color: var(--cokelatMuda);
 }
 
-/* Navigation bar styling */
-.bar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+ul {
+    list-style-type: none;
     display: flex;
-    justify-content: center;
-    }
-
-nav ul li {
-    margin: 0 15px;
-    }
-
-.bar ul li a {
-    text-decoration: none;
-    color: var(--textColor2); 
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    gap: 15px;
 }
 
-.bar ul li a:hover {
-    color: var(--textColor1 );
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--textColor1);
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+ul li a:hover {
+    background-color: var(--cokelatSedang);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Untuk tampilan mobile (layar kecil) */
+@media (max-width: 768px) {
+    ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--cokelatMuda);
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 }
 
 /* Main section styling */
@@ -85,6 +122,11 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin: 20px auto;
     max-width: 1200px;
+}
+
+.intro{
+    align-content: center;
+    height: 70vh;
 }
 
 .intro h1 {
@@ -119,7 +161,7 @@ main {
 /* Features section styling */
 .features {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping to fit more boxes */
+    flex-wrap: wrap; 
     justify-content: center;
     margin-top: 80px;
 }
@@ -144,7 +186,7 @@ main {
 .feature-box h3 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: var(--cokelatTua); /* Darker pink for feature titles */
+    color: var(--cokelatTua); 
 }
 
 .feature-box p {
@@ -312,8 +354,9 @@ main {
 footer {
     background-color: var(--cokelatSedang);
     color: var(--white);
-    padding: 30px 20px;
+    padding: 40px 20px; /* Menambahkan padding lebih untuk estetika */
     text-align: center;
+    max-width: 100%;
 }
 
 .footer-container {
@@ -326,38 +369,52 @@ footer {
 
 .footer-description {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     margin-right: 20px;
+    align-items: center;
 }
 
 .footer-description h3 {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Ukuran font lebih besar */
     margin-bottom: 10px;
 }
 
 .footer-description p {
     font-size: 1rem;
     line-height: 1.5;
+    margin-bottom: 15px; /* Menambahkan margin bawah untuk pemisahan */
+    max-width: 500px;
 }
 
 .footer-social {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    align-items: center;
 }
 
 .footer-social h3 {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Ukuran font lebih besar */
     margin-bottom: 10px;
+}
+
+.footer-social p {
+    max-width: 500px;
 }
 
 .social-icons {
     list-style-type: none;
     padding: 0;
+    display: flex; /* Mengubah menjadi flex untuk tata letak horizontal */
+    justify-content: center; /* Memusatkan ikon */
 }
 
 .social-icons li {
-    display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px; /* Menambahkan margin untuk jarak antar ikon */
 }
 
 .social-icons li a {

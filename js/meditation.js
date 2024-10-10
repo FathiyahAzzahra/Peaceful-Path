@@ -40,7 +40,6 @@ function startTimer() {
             clearInterval(countdownTimer);
             timerSound.pause(); // Stop the sound when the timer ends
             timerSound.currentTime = 0; // Reset the sound to the beginning
-            alert("Waktu habis! Silakan bernafas dengan tenang.");
         }
     }, 1000);
 }

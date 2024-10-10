@@ -10,35 +10,66 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Dubai Light', 'Century Gothic', sans-serif;
     background-color: var(--white);
     color: var(--textColor1);
 }
-
 .opening {
-    background-image: url('../assets/zara/foto/alam.jpg');
-    padding: 20px;
-    text-align: center; 
-    justify-content: center; 
-    color: var(--textColor1); 
-    min-height: 80vh; 
-    
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
+    margin-top: 80px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column; /* Susun isi secara vertikal */
+    align-items: center; /* Pusatkan isi di tengah */
+    justify-content: center; /* Pusatkan isi di tengah */
+    background-color: var(--cokelatMuda);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Rata tengah teks */
+    transition: background-color 0.3s ease;
 }
 
-.opening h1 {
-    font-size: 2.5rem; 
-    margin-bottom: 10px;
+.opening-content {
+    margin: 20px 0; /* Beri jarak antar elemen */
 }
 
-.opening p {
+h1 {
+    font-size: 2.5rem;
+    color: var(--cokelatTua);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+h1 span {
+    color: var(--cokelatSedang);
+}
+
+p {
     font-size: 1.2rem;
-    margin: 0; 
-    line-height: 1.5; 
+    color: var(--textColor2);
+    margin-top: 10px;
 }
+
+.logo-container img {
+    transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1); /* Efek hover untuk logo */
+}
+
+
+/* Untuk tampilan responsif */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+
+    p {
+        font-size: 1rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+}
+
 
 h1 {
     margin: 0;

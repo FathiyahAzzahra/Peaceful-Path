@@ -1,171 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../css/dailyWellness.css" />
-    <link rel="stylesheet" href="../css/myProgress.css">
-    <link rel="stylesheet" href="../css/style.css">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+/>
+<link rel="stylesheet" href="../css/dailyWellness.css" />
+<link rel="stylesheet" href="../css/myProgress.css">
+<link rel="stylesheet" href="../css/style.css">
 
-    <title>Daily Wellness</title>
-  </head>
+<title>Daily Wellness</title>
+</head>
 
 
-  <body>
-    <!-- header -->
+<body>
+    <!-- Header section -->
     <header>
-      <div id="logo">
-          <img src="../assets/fanny/logo.png" alt="Logo" style="height: 50px;">
-          Peaceful Path
-      </div>
-      <nav>
-          <div class="bar">
-              <ul>
-                  <li><a href="..//html/index.html">Home</a></li>
-                  <li><a href="../html/meditation.html">Meditation & Relaxation</a></li>
-                  <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
-                  <!-- <li><a href="tracking.html">Mood & Mental Tracking</a></li> -->
-                  <li><a href="community.html">Community</a></li>
-                  <!-- <li><a href="../html/MyProgress.html">My Progress</a></li> -->
-                  <li><a href="resources.html">Resources</a></li>
-              </ul>
-          </div>
-      </nav>
-  </header>
+        <div id="logo">
+            <img src="../assets/fanny/logo.png" alt="Logo" style="height: 50px;">
+            Peaceful Path
+        </div>
+        <nav>
+            <div class="bar">
+                <ul id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../html/meditation.html">Meditation & Relaxation</a></li>
+                    <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
+                    <li><a href="../html/community.html">Community</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+                <!-- Icon menu (3 garis) -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <script src="../js/home.js"></script>
+            </div>
+        </nav>
+    </header>
 
-    <div class="container">
-      <div class="calendar">
-          <div class="calendar-header">
-              <div id="month-name" class="month-picker">January</div>
-              <div id="year" class="year-picker">2024</div>
-              <div id="pre-year" class="year-change">❮</div>
-              <div id="next-year" class="year-change">❯</div>
-          </div>
+<!-- Quotes Section -->
+<section class="daily-quote">
+    <h2>Today's Quote</h2>
+    <blockquote id="quote">
+        "The journey of a thousand miles begins with one step." – Lao Tzu
+    </blockquote>
+</section>
 
-          <!-- Dropdown for Month Selection -->
-          <div class="month-dropdown" id="month-dropdown">
-              <div class="month-item" data-month="0">January</div>
-              <div class="month-item" data-month="1">February</div>
-              <div class="month-item" data-month="2">March</div>
-              <div class="month-item" data-month="3">April</div>
-              <div class="month-item" data-month="4">May</div>
-              <div class="month-item" data-month="5">June</div>
-              <div class="month-item" data-month="6">July</div>
-              <div class="month-item" data-month="7">August</div>
-              <div class="month-item" data-month="8">September</div>
-              <div class="month-item" data-month="9">October</div>
-              <div class="month-item" data-month="10">November</div>
-              <div class="month-item" data-month="11">December</div>
-          </div>
+<div class="container">
+    <div class="calendar">
+        <div class="calendar-header">
+            <div id="month-name" class="month-picker">January</div>
+            <div id="year" class="year-picker">2024</div>
+            <div id="pre-year" class="year-change">❮</div>
+            <div id="next-year" class="year-change">❯</div>
+        </div>
 
-          <div class="calendar-body">
-              <div class="calendar-week-days">
-                  <div>Sun</div>
-                  <div>Mon</div>
-                  <div>Tue</div>
-                  <div>Wed</div>
-                  <div>Thu</div>
-                  <div>Fri</div>
-                  <div>Sat</div>
-              </div>
-              <div class="calendar-days"></div>
-          </div>
-          <div class="calendar-footer"></div>
+        <!-- Dropdown for Month Selection -->
+        <div class="month-dropdown" id="month-dropdown">
+            <div class="month-item" data-month="0">January</div>
+            <div class="month-item" data-month="1">February</div>
+            <div class="month-item" data-month="2">March</div>
+            <div class="month-item" data-month="3">April</div>
+            <div class="month-item" data-month="4">May</div>
+            <div class="month-item" data-month="5">June</div>
+            <div class="month-item" data-month="6">July</div>
+            <div class="month-item" data-month="7">August</div>
+            <div class="month-item" data-month="8">September</div>
+            <div class="month-item" data-month="9">October</div>
+            <div class="month-item" data-month="10">November</div>
+            <div class="month-item" data-month="11">December</div>
+        </div>
 
-          <div class="date-time-format">
-              <div class="day-text-format">TODAY</div>
-              <div class="date-time-value" id="today">
-                  <div class="time-format">02:51:20</div>
-                  <div class="date-format">23 - July - 2022</div>
-              </div>
-          </div>
-          <div class="month-list"></div>
-      </div>
+        <div class="calendar-body">
+            <div class="calendar-week-days">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="calendar-days"></div>
+        </div>
+        <div class="calendar-footer"></div>
 
-      <div class="plan-input">
-          <input type="text" id="event-input" placeholder="Enter your plan..." />
-          <button id="add-event">Add Plan</button>
-      </div>
-      <div class="event-list"></div>
-  </div>
-    <script src="../js/dailyWellness.js"></script>
+        <div class="date-time-format">
+            <div class="day-text-format">TODAY</div>
+            <div class="date-time-value" id="today">
+                <div class="time-format">02:51:20</div>
+                <div class="date-format">23 - July - 2022</div>
+            </div>
+        </div>
+        <div class="month-list"></div>
+    </div>
+
+    <div class="plan-input">
+        <input type="text" id="event-input" placeholder="Enter your plan..." />
+        <button id="add-event">Add Plan</button>
+    </div>  
+</div>
+<script src="../js/dailyWellness.js"></script>
 
 
 
 <!-- -------------------------ZARA-------------------------------------- -->
 
 
-  <!-- Daily Checklist Section -->
-  <section class="daily-checklist">
-      <h2>Today's Checklist</h2>
-      <ul id="checklist">
-          <li>
-              <input type="checkbox" id="water" class="habit">
-              <label for="water">Drink 8 glasses of water</label>
-          </li>
-          <li>
-              <input type="checkbox" id="meditation" class="habit">
-              <label for="meditation">Meditate for 15 minutes</label>
-          </li>
-          <li>
-              <input type="checkbox" id="exercise" class="habit">
-              <label for="exercise">Do 30 minutes of exercise</label>
-          </li>
-          <li>
-            <input type="checkbox" id="exercise" class="habit">
-            <label for="exercise">Do 30 minutes of exercise</label>
-        </li>
-        <li>
-          <input type="checkbox" id="exercise" class="habit">
-          <label for="exercise">Do 30 minutes of exercise</label>
-      </li> 
-      </ul>
-  </section>
+<!-- Daily Checklist Section -->
+<section class="daily-checklist">
+    <h2>Today's Checklist</h2>
+    <ul id="checklist">
+        <p>No Activity Yet</p>
+    </ul>
+        <!-- Progress bar container -->
+    <section class="progress-section">
+        <h2>Your Progress</h2>
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>  
+    </section>
+</section>
 
-  <!-- Progress Bar Section -->
-  <section class="progress-section">
-      <h2>Your Progress</h2>
-      <div class="progress-container">
-          <div class="progress-bar" id="progress-bar"></div>
-      </div>
-      <p id="progress-percentage">0% Complete</p>
-  </section>
 
-  <!-- Quotes Section -->
-  <section class="daily-quote">
-      <h2>Today's Quote</h2>
-      <blockquote id="quote">
-          "The journey of a thousand miles begins with one step." – Lao Tzu
-      </blockquote>
-  </section>
 
-  <script src="../js/myProgress.js"></script>
+<script src="../js/myProgress.js"></script>
 
-  <!-- Footer Section -->
-  <footer>
+<!-- Footer Section -->
+<footer>
     <div class="footer-container">
         <div class="footer-description">
-            <h3>Tentang Peaceful Path</h3>
-            <p>Peaceful Path adalah platform yang membantu Anda menemukan ketenangan melalui meditasi, pelacakan kesejahteraan harian, dan komunitas yang mendukung kesehatan mental.</p>
+            <h3>About Peaceful Path</h3>
+            <p>Peaceful Path is your sanctuary for mental wellness. We offer guided meditations, daily wellness tracking, and a supportive community to help you find tranquility.</p>
         </div>
+        
         <div class="footer-social">
-            <h3>Ikuti Kami</h3>
+            <h3>Follow Us</h3>
+            <p>Stay connected with us on social media for the latest updates, tips, and community support.</p>
             <ul class="social-icons">
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://x.com/i/flow/login" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
             </ul>
         </div>
     </div>
 </footer>
 
 <div class="footer-copyright">
-    <p>&copy; 2024 Peaceful Path. All rights reserved.</p>
+    <p>&copy; 2024 Peaceful Path. Your journey to peace begins here.</p>
 </div>
 </body>

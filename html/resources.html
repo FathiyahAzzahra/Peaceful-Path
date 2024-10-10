@@ -22,25 +22,33 @@
         </div>
         <nav>
             <div class="bar">
-                <ul>
+                <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="../html/meditation.html">Meditation & Relaxation</a></li>
                     <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
-                    <!-- <li><a href="tracking.html">Mood & Mental Tracking</a></li> -->
-                    <li><a href="community.html">Community</a></li>
-                    <!-- <li><a href="../html/MyProgress.html">My Progress</a></li> -->
+                    <li><a href="../html/community.html">Community</a></li>
                     <li><a href="resources.html">Resources</a></li>
                 </ul>
+                <!-- Icon menu (3 garis) -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <script src="../js/home.js"></script>
             </div>
         </nav>
     </header>
     
     <!-- awal Section -->
     <div class="opening">
-        <h1>Resources</h1>
-        <p>Your hub for mental health support and education.</p>
+        <div class="opening-content">
+            <h1>Peacefull <span>Path</span></h1>
+            <p>Your hub for mental health support and education.</p>
+        </div>
+        <div class="opening-content logo-container">
+            <img src="../assets/fanny/logo.png" alt="Logo" style="height: 80px;">
+        </div>
     </div>
-
+    
     <!-- Video Gallery Section -->
     <div class="video-gallery-container swiper">
         <div class="card-wrapper swiper-wrapper">
@@ -108,6 +116,36 @@
                 <p>Kesehatan jiwa atau sebutan lainnya kesehatan mental adalah kesehatan yang berkaitan dengan kondisi emosi, kejiwaan, dan psikis seseorang    </p>
                 <a href="https://www.halodoc.com/kesehatan/kesehatan-mental?srsltid=AfmBOorcGTKBfvPBenh3E-I0ymy-pJRRC4XPUjYIQ7FBeAvSu3t5EsNd" class="read-more-btn">Read More</a>
             </article>
+            <article class="article-item" data-theme="mental-health">
+                <h3>Apa itu Kesehatan Mental? Gejala & Penyebab</h3>
+                <p>Kesehatan jiwa atau sebutan lainnya kesehatan mental adalah kesehatan yang berkaitan dengan kondisi emosi, kejiwaan, dan psikis seseorang    </p>
+                <a href="https://www.halodoc.com/kesehatan/kesehatan-mental?srsltid=AfmBOorcGTKBfvPBenh3E-I0ymy-pJRRC4XPUjYIQ7FBeAvSu3t5EsNd" class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="mental-health">
+                <h3>Apa itu Kesehatan Mental? Gejala & Penyebab</h3>
+                <p>Kesehatan jiwa atau sebutan lainnya kesehatan mental adalah kesehatan yang berkaitan dengan kondisi emosi, kejiwaan, dan psikis seseorang    </p>
+                <a href="https://www.halodoc.com/kesehatan/kesehatan-mental?srsltid=AfmBOorcGTKBfvPBenh3E-I0ymy-pJRRC4XPUjYIQ7FBeAvSu3t5EsNd" class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="mental-health">
+                <h3>Apa itu Kesehatan Mental? Gejala & Penyebab</h3>
+                <p>Kesehatan jiwa atau sebutan lainnya kesehatan mental adalah kesehatan yang berkaitan dengan kondisi emosi, kejiwaan, dan psikis seseorang    </p>
+                <a href="https://www.halodoc.com/kesehatan/kesehatan-mental?srsltid=AfmBOorcGTKBfvPBenh3E-I0ymy-pJRRC4XPUjYIQ7FBeAvSu3t5EsNd" class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="meditation">
+                <h3>Meditasi untuk Mengatasi Stres dan Penyakit</h3>
+                <p>Banyak orang mengira bahwa diperlukan ruangan tenang, musik khusus, atau ritual tertentu untuk melakukan meditasi. Padahal, Anda bisa melakukannya kapan saja, misalnya saat menunggu bus datang, istirahat di sela waktu kerja, atau di tengah kemacetan lalu lintas.</p>
+                <a href="https://www.alodokter.com/sering-sakit-dan-stres-coba-meditasi" class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="meditation">
+                <h3>Meditasi untuk Mengatasi Stres dan Penyakit</h3>
+                <p>Banyak orang mengira bahwa diperlukan ruangan tenang, musik khusus, atau ritual tertentu untuk melakukan meditasi. Padahal, Anda bisa melakukannya kapan saja, misalnya saat menunggu bus datang, istirahat di sela waktu kerja, atau di tengah kemacetan lalu lintas.</p>
+                <a href="https://www.alodokter.com/sering-sakit-dan-stres-coba-meditasi" class="read-more-btn">Read More</a>
+            </article>
+            <article class="article-item" data-theme="meditation">
+                <h3>Meditasi untuk Mengatasi Stres dan Penyakit</h3>
+                <p>Banyak orang mengira bahwa diperlukan ruangan tenang, musik khusus, atau ritual tertentu untuk melakukan meditasi. Padahal, Anda bisa melakukannya kapan saja, misalnya saat menunggu bus datang, istirahat di sela waktu kerja, atau di tengah kemacetan lalu lintas.</p>
+                <a href="https://www.alodokter.com/sering-sakit-dan-stres-coba-meditasi" class="read-more-btn">Read More</a>
+            </article>
             <article class="article-item" data-theme="meditation">
                 <h3>Meditasi untuk Mengatasi Stres dan Penyakit</h3>
                 <p>Banyak orang mengira bahwa diperlukan ruangan tenang, musik khusus, atau ritual tertentu untuk melakukan meditasi. Padahal, Anda bisa melakukannya kapan saja, misalnya saat menunggu bus datang, istirahat di sela waktu kerja, atau di tengah kemacetan lalu lintas.</p>
@@ -119,11 +157,6 @@
                 <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
             </article>
             <article class="article-item" data-theme="sleep">
-                <h3>Lama Waktu Tidur yang Dibutuhkan oleh Tubuh</h3>
-                <p>F. Usia 18-40 tahun: orang dewasa membutuhkan waktu tidur 7-8 jam setiap hari. Adanya penjelasan mengenai rincian jam tidur yang baik</p>
-                <a href="F. Usia 18-40 tahun: orang dewasa membutuhkan waktu tidur 7-8 jam setiap hari. Adanya penjelasan mengenai rincian jam tidur yang baik" class="read-more-btn">Read More</a>
-            </article>
-            <article class="article-item" data-theme="sleep">
                 <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
                 <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
                 <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
@@ -133,21 +166,12 @@
                 <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
                 <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
             </article>
-            <article class="article-item" data-theme="meditation">
+            <article class="article-item" data-theme="sleep">
                 <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
                 <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
                 <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
             </article>
-            <article class="article-item" data-theme="meditation">
-                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
-                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
-                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
-            </article>
-            <article class="article-item" data-theme="mental-health">
-                <h3>Apa Manfaat Tidur Untuk Kesehatan</h3>
-                <p>Tidur yang cukup dapat meningkatkan produksi antibodi, yaitu protein yang membantu melawan infeksi dan memperkuat kekebalan tubuh terhadap penyakit tertentu</p>
-                <a href="https://telemed.ihc.id/artikel-detail-948-apa-manfaat-tidur-untuk-kesehatan.html#:~:text=Dengan%20istirahat%20yang%20baik%2C%20tubuh,pemulihan%20dan%20mengurangi%20durasi%20penyakit.&text=Tidur%20yang%20cukup%20dapat%20meningkatkan,kekebalan%20tubuh%20terhadap%20penyakit%20tertentu." class="read-more-btn">Read More</a>
-            </article>
+
         </div>
     </section>
     
@@ -157,23 +181,25 @@
     <footer>
         <div class="footer-container">
             <div class="footer-description">
-                <h3>Tentang Peaceful Path</h3>
-                <p>Peaceful Path adalah platform yang membantu Anda menemukan ketenangan melalui meditasi, pelacakan kesejahteraan harian, dan komunitas yang mendukung kesehatan mental.</p>
+                <h3>About Peaceful Path</h3>
+                <p>Peaceful Path is your sanctuary for mental wellness. We offer guided meditations, daily wellness tracking, and a supportive community to help you find tranquility.</p>
             </div>
+            
             <div class="footer-social">
-                <h3>Ikuti Kami</h3>
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media for the latest updates, tips, and community support.</p>
                 <ul class="social-icons">
-                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/i/flow/login" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
         </div>
     </footer>
-
+    
     <div class="footer-copyright">
-        <p>&copy; 2024 Peaceful Path. All rights reserved.</p>
+        <p>&copy; 2024 Peaceful Path. Your journey to peace begins here.</p>
     </div>
 
 </body>

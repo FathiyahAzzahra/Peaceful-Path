@@ -14,17 +14,21 @@
         <div id="logo">
             <img src="../assets/fanny/logo.png" alt="Logo" style="height: 50px;">
             Peaceful Path
-        </div>        <nav>
+        </div>
+        <nav>
             <div class="bar">
-                <ul>
+                <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="../html/meditation.html">Meditation & Relaxation</a></li>
                     <li><a href="../html/dailyWellness.html">Daily Wellness</a></li>
-                    <!-- <li><a href="tracking.html">Mood & Mental Tracking</a></li> -->
                     <li><a href="../html/community.html">Community</a></li>
-                    <!-- <li><a href="../html/MyProgress.html">My Progress</a></li> -->
                     <li><a href="resources.html">Resources</a></li>
                 </ul>
+                <!-- Icon menu (3 garis) -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <script src="../js/home.js"></script>
             </div>
         </nav>
     </header>
@@ -83,23 +87,25 @@
     <footer>
         <div class="footer-container">
             <div class="footer-description">
-                <h3>Tentang Peaceful Path</h3>
-                <p>Peaceful Path adalah platform yang membantu Anda menemukan ketenangan melalui meditasi, pelacakan kesejahteraan harian, dan komunitas yang mendukung kesehatan mental.</p>
+                <h3>About Peaceful Path</h3>
+                <p>Peaceful Path is your sanctuary for mental wellness. We offer guided meditations, daily wellness tracking, and a supportive community to help you find tranquility.</p>
             </div>
+            
             <div class="footer-social">
-                <h3>Ikuti Kami</h3>
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media for the latest updates, tips, and community support.</p>
                 <ul class="social-icons">
-                    <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="https://x.com/i/flow/login"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/i/flow/login" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/?hl=en" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
         </div>
     </footer>
-
+    
     <div class="footer-copyright">
-        <p>&copy; 2024 Peaceful Path. All rights reserved.</p>
+        <p>&copy; 2024 Peaceful Path. Your journey to peace begins here.</p>
     </div>
 </body>
 </html>

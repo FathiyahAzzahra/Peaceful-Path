@@ -9,7 +9,7 @@
 
 /* Basic Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Dubai Light', 'Century Gothic', sans-serif;
     background-color: var(--cokelatMuda2); /* Background lebih soft */
     color: var(--textColor1); /* Warna teks utama */
     margin: 0;
@@ -19,16 +19,16 @@ body {
 
 header {
     padding: 20px;
-    background-color: var(--cokelatMuda); /* Background header */
-    color: var(--textColor1); /* Warna teks header */
+    background-color: var(--cokelatMuda); 
+    color: var(--textColor1); 
 }
 
 h1, h2 {
-    color: var(--cokelatTua); /* Judul dengan warna cokelat tua */
+    color: var(--cokelatTua); 
 }
 
 p {
-    color: var(--textColor2); /* Warna teks paragraf */
+    color: var(--textColor2); 
 }
 
 section {
@@ -38,6 +38,17 @@ section {
 }
 
 /* Checklist Section */
+.daily-checklist{
+    background-color: var(--cokelatMuda);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 0;
+    border-radius: 30px;
+}
+
 .daily-checklist ul {
     list-style-type: none;
     padding: 0;
@@ -45,12 +56,21 @@ section {
     flex-direction: column; /* Supaya item tetap vertikal */
     justify-content: center;
     align-items: center; /* Memusatkan ul beserta itemnya */
+    font-size: large;
+}
+
+.daily-checklist h2{
+    background-color: var(--cokelatSedang);
+    padding: 10px 50px;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 .daily-checklist li {
     display: flex;
     align-items: center;
     margin: 10px 0;
+    
 }
 
 .habit {
@@ -61,26 +81,26 @@ label {
     color: var(--cokelatTua); /* Warna label checklist */
 }
 
-/* Progress Bar Styling */
-.progress-container {
+/* ------------------------------------------------ */
+/* Container for the progress bar */
+#progressContainer {
     width: 100%;
-    background-color: var(--cokelatSedang); /* Background progress bar */
+    background-color: #f3f3f3;
     border-radius: 20px;
-    height: 30px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
-.progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: var(--cokelatTua); /* Warna progress bar */
+/* Actual progress bar */
+#progressBar {
+    width: 0%;
+    height: 20px;
+    background-color: #4caf50; /* Warna hijau untuk progress */
     border-radius: 20px;
-    transition: width 0.4s ease;
+    transition: width 0.3s ease;
 }
 
-#progress-percentage {
-    color: var(--cokelatTua); /* Warna persentase progress */
-}
+/* --------------------------------------- */
+
 
 /* Quotes Section */
 .daily-quote {
@@ -88,6 +108,14 @@ label {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 150px;
+    margin-top: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center; /* Aligns horizontally */
+    align-items: center;     /* Aligns vertically */
 }
 
 blockquote {
@@ -95,4 +123,5 @@ blockquote {
     color: var(--textColor2); /* Warna kutipan */
     margin: 0;
     font-size: 1.5rem;
+    
 }

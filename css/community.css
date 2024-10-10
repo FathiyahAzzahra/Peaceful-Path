@@ -10,14 +10,20 @@
 
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Dubai Light', 'Century Gothic', sans-serif;
     background-color: var(--cokelatMuda); /* Background warna cokelat muda */
     margin: 0;
     padding: 0;
     color: var(--textColor1); /* Warna teks utama */
 }
 
+.section {
+    margin-top: 200px;
+    height: 500px;
+}
+
 /* Container */
+
 .container, #discussion-container {
     width: 80%;
     margin: 30px auto;
@@ -164,6 +170,7 @@ h1 {
 #support-groups {
     display: flex;
     gap: 30px;
+    padding: 0 6rem;
 
 }
 
@@ -172,7 +179,7 @@ h1 {
     border: 1px solid var(--cokelatSedang);
     padding: 15px;
     border-radius: 10px;
-    margin: 20px 50px;
+    /* margin: 20px 50px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 90%;
 }

@@ -5,7 +5,6 @@ const nextYear = document.getElementById("next-year");
 const calendarDays = document.querySelector(".calendar-days");
 const eventInput = document.getElementById("event-input");
 const addEventButton = document.getElementById("add-event");
-const eventList = document.querySelector(".event-list");
 const monthDropdown = document.getElementById("month-dropdown");
 
 let currentYear = new Date().getFullYear();
@@ -91,21 +90,26 @@ function renderCalendar() {
 function addEvent() {
     const eventText = eventInput.value.trim();
     if (!selectedDay || !eventText) {
-        return; // Do nothing if no date selected or input is empty
+        return; 
     }
 
-    const dateString = selectedDay.toDateString(); // Get the selected date as string
+    const dateString = selectedDay.toDateString(); 
 
     if (!events[dateString]) {
         events[dateString] = [];
     }
 
-    events[dateString].push(eventText);
-    eventInput.value = ""; // Clear input
-    selectedDay = null; // Reset selected day
+    events[dateString].push({
+        text: eventText,
+        isCompleted: false
+    });
+
+    eventInput.value = ""; 
+    selectedDay = null; 
     renderCalendar();
     renderEventList();
 }
+
 
 // Add event listener for "Add" button
 addEventButton.onclick = addEvent;
@@ -116,34 +120,6 @@ eventInput.addEventListener("keypress", (event) => {
         addEvent();
     }
 });
-
-// Render event list
-function renderEventList() {
-    eventList.innerHTML = ""; // Clear previous events
-    for (const date in events) {
-        events[date].forEach((event, index) => {
-            const eventItem = document.createElement("div");
-            eventItem.innerHTML = `${date}: ${event} <button class="delete-event" data-date="${date}" data-index="${index}">Delete</button>`;
-            eventList.appendChild(eventItem);
-        });
-    }
-
-    // Add event listeners for delete buttons
-    const deleteButtons = document.querySelectorAll(".delete-event");
-    deleteButtons.forEach(button => {
-        button.onclick = () => {
-            const date = button.getAttribute("data-date");
-            const index = button.getAttribute("data-index");
-
-            events[date].splice(index, 1); // Remove the event
-            if (events[date].length === 0) {
-                delete events[date]; // Delete the date if no events are left
-            }
-            renderCalendar();
-            renderEventList();
-        };
-    });
-}
 
 // Event listeners for year change
 preYear.onclick = () => {
@@ -181,7 +157,44 @@ document.addEventListener("click", (event) => {
 // Initialize calendar display
 displayCurrentMonth(); 
 
-// Function to update current time dynamically
+function checkTodayEvents() {
+    const todayDate = new Date().toDateString();
+    
+    // Jika ada event untuk hari ini, render checklist
+    if (events[todayDate]) {
+        const checklist = document.getElementById('checklist');
+        checklist.innerHTML = ''; // Clear existing checklist
+
+        // Render event sebagai checklist
+        events[todayDate].forEach((event, index) => {
+            const listItem = document.createElement('li');
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = `event-${index}`;
+            checkbox.classList.add('habit');
+            checkbox.checked = event.isCompleted;
+            
+            // Update event ketika checkbox di-check
+            checkbox.addEventListener('change', () => {
+                event.isCompleted = checkbox.checked;
+                updateProgress();
+            });
+
+            const label = document.createElement('label');
+            label.htmlFor = `event-${index}`;
+            label.innerText = event.text;
+
+            listItem.appendChild(checkbox);
+            listItem.appendChild(label);
+            checklist.appendChild(listItem);
+        });
+
+        // Update progress bar setelah rendering checklist
+        updateProgress();
+    }
+}
+
+// Panggil fungsi ini dalam updateDateTime
 function updateDateTime() {
     const todayElement = document.getElementById('today');
 
@@ -195,7 +208,11 @@ function updateDateTime() {
 
     // Display time and date
     todayElement.innerHTML = `${hours}:${minutes}:${seconds} <br> ${day} - ${month} - ${year}`;
+
+    // Check for events today
+    checkTodayEvents();
 }
+
 
 // Update time every second
 setInterval(updateDateTime, 1000);
