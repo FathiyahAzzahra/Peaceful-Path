@@ -39,7 +39,8 @@ section {
     justify-content: center;    
     align-items: center;        
     gap: 20px;                  
-    margin-bottom: 20px;     
+    margin-bottom: 20px;    
+    flex-direction: column; 
 }
 
 #countdown {
@@ -64,16 +65,90 @@ section {
 
 #timer {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
+    margin: 20px 10px;
 }
+
+@media (max-width: 500px) {
+    #timer {
+        width: 70vw; /* Mengurangi lebar untuk layar kecil */
+        height: 70vh; /* Mengurangi tinggi untuk layar kecil */
+    }
+
+    .input-container {
+        width: 80vw; 
+    }
+}
+
+@media (max-width: 350px) {
+    #timer {
+        width: 35vw; /* Mengurangi lebar untuk layar sangat kecil */
+        height: 35vw; /* Mengurangi tinggi untuk layar sangat kecil */
+    }
+
+    .input-container {
+        width: 40vw; 
+    }
+
+    #timeDisplay {
+        font-size: 1.5rem; /* Mengurangi ukuran font untuk layar kecil */
+    }
+}
+
 .input-container {
-    margin-left: -10px; 
+    background-color: var(--cokelatMuda2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cokelatSedang);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--textColor2);
+}
+
+.input-container .button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-container button {
+    background-color: var(--cokelatTua);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.input-container button:hover {
+    background-color: var(--cokelatSedang);
+}
+
+.input-container button:active {
+    background-color: var(--cokelatTua);
 }
 
 #container {

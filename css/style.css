@@ -91,24 +91,26 @@ ul li a:hover {
 
 /* Untuk tampilan mobile (layar kecil) */
 @media (max-width: 768px) {
-    ul {
+    nav ul {
         display: none;
         flex-direction: column;
         background-color: var(--cokelatMuda);
         position: absolute;
         top: 50px;
         right: 0;
-        width: 200px;
+        padding: 30px;
+        width: 400px;
         text-align: center;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 20px;
     }
 
     ul.show {
         display: flex;
     }
 
-    .menu-icon {
+    nav .menu-icon {
         display: block;
     }
 }
@@ -323,29 +325,6 @@ main {
 @media (max-width: 768px) {
     .feature-box {
         width: 100%; 
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    .intro h1 {
-        font-size: 36px;
-    }
-
-    .intro p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    nav ul li {
-        margin: 0 5px;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 16px;
     }
 }
 /* ------------------------------------------------- */
