@@ -10,7 +10,7 @@
 
 /* Global Styles */
 body {
-    font-family: 'Dubai Light', 'Century Gothic', sans-serif;
+    font-family: 'Poppins', 'Roboto', 'Open Sans', sans-serif;
     background-color: var(--cokelatMuda); /* Background warna cokelat muda */
     margin: 0;
     padding: 0;

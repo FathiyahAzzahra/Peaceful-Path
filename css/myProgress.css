@@ -9,7 +9,7 @@
 
 /* Basic Styling */
 body {
-    font-family: 'Dubai Light', 'Century Gothic', sans-serif;
+    font-family: 'Poppins', 'Roboto', 'Open Sans', sans-serif;
     background-color: var(--cokelatMuda2); /* Background lebih soft */
     color: var(--textColor1); /* Warna teks utama */
     margin: 0;

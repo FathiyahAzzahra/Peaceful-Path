@@ -10,7 +10,7 @@
 
 body {
     margin: 0;
-    font-family: 'Dubai Light', 'Century Gothic', sans-serif;
+    font-family: 'Poppins', 'Roboto', 'Open Sans', sans-serif;
     background-color: var(--white);
     color: var(--textColor1);
 }
