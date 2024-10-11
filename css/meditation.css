@@ -50,6 +50,7 @@ section {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 20px;
+    color: var(--textColor2);
 }
 
 .circle {
@@ -183,7 +184,7 @@ section {
 
 #timeDisplay {
     font-size: 32px;
-    color: var(--white);
+    color: var(--textColor2);
     font-weight: bold;
     z-index: 1;
 }
